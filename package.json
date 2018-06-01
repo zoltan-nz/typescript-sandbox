@@ -1,0 +1,25 @@
+{
+  "name": "typescript-sandbox",
+  "version": "1.0.0",
+  "description": "Playing with Streams and Transform and CSV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoltan-nz/typescript-sandbox.git"
+  },
+  "author": "Zoltan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoltan-nz/typescript-sandbox/issues"
+  },
+  "homepage": "https://github.com/zoltan-nz/typescript-sandbox#readme",
+  "devDependencies": {
+    "@types/node": "^10.3.4",
+    "ts-node": "^6.1.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  }
+}

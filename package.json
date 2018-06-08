@@ -6,7 +6,13 @@
   "scripts": {
     "clean": "del ./dist",
     "lint": "tslint --project ./tsconfig.json --fix",
-    "build": "tsc"
+    "build": "npm run lint && tsc",
+    "test": "jest",
+    "watch:build": "tsc --watch",
+    "watch:lint": "chokidar src/**/*.ts --initial --silent -c 'npm -s run lint'",
+    "watch:test": "CI=true jest --watchAll",
+    "debug": "NODE_ENV=development DEBUG=* ts-node --inspect-brk",
+    "dev": "concurrently --names 'BUILD,TEST' -c 'yellow,cyan' 'npm run watch:build' 'npm run watch:test'"
   },
   "repository": {
     "type": "git",
@@ -19,10 +25,22 @@
   },
   "homepage": "https://github.com/zoltan-nz/typescript-sandbox#readme",
   "devDependencies": {
+    "@types/jest": "^23.1.1",
     "@types/node": "^10.3.4",
+    "chokidar-cli": "^1.2.0",
+    "concurrently": "^3.6.0",
     "del-cli": "^1.1.0",
+    "jest": "^23.1.0",
+    "nodemon": "^1.17.5",
+    "ts-jest": "^22.4.6",
     "ts-node": "^6.1.1",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [ "ts", "tsx", "js", "jsx", "json" ],
+    "testRegex": "(^__tests__/.*|(\\.|/)(test|spec))\\.(ts)$",
+    "transform": { "^.+\\.tsx?$": "ts-jest"},
+    "verbose": true
   }
 }

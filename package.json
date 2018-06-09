@@ -11,7 +11,7 @@
     "watch:build": "tsc --watch",
     "watch:lint": "chokidar src/**/*.ts --initial --silent -c 'npm -s run lint'",
     "watch:test": "CI=true jest --watchAll",
-    "debug": "NODE_ENV=development DEBUG=* ts-node --inspect-brk",
+    "debug": "NODE_ENV=development DEBUG=* node --inspect-brk --require ts-node/register",
     "dev": "concurrently --names 'BUILD,TEST' -c 'yellow,cyan' 'npm run watch:build' 'npm run watch:test'"
   },
   "repository": {
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/zoltan-nz/typescript-sandbox#readme",
   "devDependencies": {
+    "@types/csv-parse": "^1.1.11",
+    "@types/fs-extra": "^5.0.3",
     "@types/jest": "^23.1.1",
     "@types/node": "^10.3.4",
     "chokidar-cli": "^1.2.0",
@@ -38,9 +40,21 @@
     "typescript": "^2.9.2"
   },
   "jest": {
-    "moduleFileExtensions": [ "ts", "tsx", "js", "jsx", "json" ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
     "testRegex": "(^__tests__/.*|(\\.|/)(test|spec))\\.(ts)$",
-    "transform": { "^.+\\.tsx?$": "ts-jest"},
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
     "verbose": true
+  },
+  "dependencies": {
+    "csv-parse": "^2.5.0",
+    "fs-extra": "^6.0.1"
   }
 }

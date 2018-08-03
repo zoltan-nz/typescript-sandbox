@@ -17,3 +17,13 @@
 | `npm run watch:test` | Run `jest` with `--watchAll` |
 | `npm run dev` | Run `watch:build` and `watch:test` parallel |
 
+
+## Experiment #2 - Testing Node.js CLI tool
+
+* Testing (Jest or Mocha?)
+* Using CLI builder: [oclif](https://github.com/oclif/oclif)
+* Add tslib, update tsconfig.json: https://github.com/Microsoft/tslib
+
+TODO:
+
+* Follow this tutorial: https://oclif.io/docs/introduction.html

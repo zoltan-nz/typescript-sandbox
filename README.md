@@ -1,6 +1,7 @@
 # TypeScript SandBox
 
 * [Experiment 1 - Streaming: Reading CSV file, transforming records to JavaScript Objects](src/streamer-experiment/README.md)
+* [Experiment 2 - Creating a CLI tool in NodeJS](./src/cli-experiment/README.md)
 
 ## NPM commands
 
@@ -17,13 +18,3 @@
 | `npm run watch:test` | Run `jest` with `--watchAll` |
 | `npm run dev` | Run `watch:build` and `watch:test` parallel |
 
-
-## Experiment #2 - Testing Node.js CLI tool
-
-* Testing (Jest or Mocha?)
-* Using CLI builder: [oclif](https://github.com/oclif/oclif)
-* Add tslib, update tsconfig.json: https://github.com/Microsoft/tslib
-
-TODO:
-
-* Follow this tutorial: https://oclif.io/docs/introduction.html

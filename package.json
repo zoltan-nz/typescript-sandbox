@@ -53,6 +53,7 @@
     "csv-parse": "^2.5.0",
     "fs-extra": "^7.0.0",
     "inquirer": "^6.1.0",
+    "moment": "^2.22.2",
     "tslib": "^1.9.3"
   },
   "jest": {
@@ -64,7 +65,7 @@
       "json"
     ],
     "testMatch": [
-      "**/*-test.+(ts|js)"
+      "**/*-test.ts"
     ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"

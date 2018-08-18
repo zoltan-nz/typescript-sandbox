@@ -1,16 +1,16 @@
 import { AssertionError } from 'assert';
 import moment, { Moment } from 'moment';
-import isValidFormat from './birthdate-validator';
+import isInValidBirthdayFormat from './birthday-validator';
 
 export default class AgeCalculator {
   private birthdayInMoment: Moment;
 
-  constructor(public birthdate: string) {
-    if (!isValidFormat(birthdate)) {
+  constructor(public birthday: string) {
+    if (!isInValidBirthdayFormat(birthday)) {
       throw new AssertionError({ message: 'Birthdate should be in ISO format: YYYY-MM-DD' });
     }
 
-    this.birthdayInMoment = moment(birthdate, 'YYYY-MM-DD');
+    this.birthdayInMoment = moment(birthday, 'YYYY-MM-DD');
   }
 
   get age() {

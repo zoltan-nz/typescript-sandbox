@@ -2,7 +2,10 @@
   "name": "typescript-sandbox",
   "version": "1.0.0",
   "description": "Playing with Streams and Transform and CSV",
-  "main": "index.js",
+  "main": "dist/package-experiment/age-calculator.js",
+  "module": "dist/package-experiment/age-calculator.js",
+  "browser": "dist/package-experiment/age-calulator.js",
+  "types": "dist/package-experiment/age-calculator.d.ts",
   "scripts": {
     "clean": "del ./dist",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,json}'",
@@ -82,10 +85,6 @@
     "printWidth": 120
   },
   "files": [
-    "/bin",
     "/dist"
-  ],
-  "oclif": {
-    "bin": "some-cli"
-  }
+  ]
 }

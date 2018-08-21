@@ -3,7 +3,6 @@ import AgeCalculator from 'typescript-sandbox';
 import './App.css';
 
 class App extends Component {
-
   constructor(props) {
     super(props);
 
@@ -13,7 +12,6 @@ class App extends Component {
   }
 
   calculateAge(value) {
-
     let ageCalculator;
     let age = null;
     let error = null;
@@ -30,7 +28,7 @@ class App extends Component {
 
   handleChange(event) {
     const birthday = event.target.value;
-    const { age, error } =this.calculateAge(birthday);
+    const { age, error } = this.calculateAge(birthday);
     this.setState({ birthday, age, error });
   }
 
@@ -40,13 +38,11 @@ class App extends Component {
         <h1>Age Calculator</h1>
         <form>
           <label>
-            Date of Birth: <input type="date" value={this.state.birthday} onChange={this.handleChange}/>
+            Date of Birth: <input type="date" value={this.state.birthday} onChange={this.handleChange} />
           </label>
         </form>
         <p>{this.state.error}</p>
-        <p>
-          Age: {this.state.age}
-        </p>
+        <p>Age: {this.state.age}</p>
       </div>
     );
   }

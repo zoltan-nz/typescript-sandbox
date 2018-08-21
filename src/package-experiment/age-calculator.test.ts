@@ -8,6 +8,6 @@ describe('Age Calculator', () => {
   });
 
   test('invalid birthday string', () => {
-    expect(() => new AgeCalculator('11-10-1992')).toThrowError(AssertionError);
+    expect(() => new AgeCalculator('11-10-1992')).toThrowError(Error);
   });
 });

@@ -1,6 +1,7 @@
 # TypeScript SandBox
 
 * [Experiment 1 - Streaming: Reading CSV file, transforming records to JavaScript Objects](src/streamer-experiment/README.md)
+* [Experiment 2 - Creating a CLI tool in NodeJS](./src/cli-experiment/README.md)
 
 ## NPM commands
 

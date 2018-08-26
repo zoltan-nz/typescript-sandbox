@@ -1,5 +1,13 @@
 .idea
 node_modules
 package-lock.json
+yarn.lock
 dist
 coverage
+.cache
+.DS_Store
+.vscode
+.nyc_output
+compiled
+.awcache
+.rpt2_cache

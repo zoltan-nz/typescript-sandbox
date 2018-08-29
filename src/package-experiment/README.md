@@ -59,15 +59,12 @@ Useful repository: https://github.com/alexjoverm/typescript-library-starter
 
 Adding the following packages to `package.json`:
 
-```
 - rollup
 - rollup-plugin-commonjs
 - rollup-plugin-json
 - rollup-plugin-node-resolve
 - rollup-plugin-sourcemaps
 - rollup-plugin-typescript2
-```
- 
 
 ## Validating package formats
 
@@ -75,10 +72,16 @@ Test environments are installed in [`package-experiment-test`](../../package-exp
 
 ### React App (webpack)
 
-* Using `commonjs`
+- Using `commonjs`
 
 ### Classic website (window.global)
 
 ### Ember.js (AMD)
 
 ### Standard Node.js (CommonJS)
+
+## Testing with jest-puppeteer
+
+```
+
+```

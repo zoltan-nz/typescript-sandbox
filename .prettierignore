@@ -3,3 +3,5 @@ dist
 resources
 package-lock.json
 .cache
+.idea
+.vscode

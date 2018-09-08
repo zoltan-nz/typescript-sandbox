@@ -1,6 +1,6 @@
 # Jest Puppeteer Experiment
 
-* [Jest Puppeteer](https://github.com/smooth-code/jest-puppeteer)
+- [Jest Puppeteer](https://github.com/smooth-code/jest-puppeteer)
 
 ```bash
 npm i -D jest-puppeteer puppeteer jest

@@ -13,4 +13,4 @@ async function main() {
   }
 }
 
-main();
+(async () => main())();

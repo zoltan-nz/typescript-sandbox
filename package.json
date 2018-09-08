@@ -16,10 +16,10 @@
     "watch:prettier": "onchange '**/*.ts' -- prettier --write {{changed}}",
     "watch:lint": "onchange '**/*.ts' -- tslint --fix --format codeFrame --project ./tsconfig.json {{changed}}",
     "watch:test": "CI=true jest --watchAll",
+    "watch:dev": "concurrently --names 'TEST,LINT' -c 'yellow,cyan' 'npm run watch:test' 'npm run watch:lint'",
     "watch:run": "nodemon --watch 'src/**/*.ts' --exec 'ts-node'",
     "watch:run:cli-experiment": "npm run watch:run -- src/cli-experiment/index.ts",
     "debug": "NODE_ENV=development DEBUG=* node --inspect-brk --require ts-node/register",
-    "dev": "concurrently --names 'BUILD,TEST,PRETTIER,LINT' -c 'yellow,cyan' 'npm run watch:build' 'npm run watch:test' 'npm run watch:prettier' 'npm run watch:lint'",
     "build:umd": "rollup -c src/package-experiment/rollup.config.ts",
     "build:amd": "tsc --project src/package-experiment",
     "build:all": "run-s build build:umd build:amd"
@@ -36,13 +36,13 @@
   "homepage": "https://github.com/zoltan-nz/typescript-sandbox#readme",
   "devDependencies": {
     "@types/csv-parse": "^1.1.11",
-    "@types/expect-puppeteer": "^2.2.4",
+    "@types/expect-puppeteer": "^3.3.0",
     "@types/fs-extra": "^5.0.4",
     "@types/inquirer": "0.0.43",
-    "@types/jest": "^23.3.1",
+    "@types/jest": "^23.3.2",
     "@types/jest-environment-puppeteer": "^2.2.1",
     "@types/node": "^10.9.4",
-    "@types/puppeteer": "^1.6.1",
+    "@types/puppeteer": "^1.6.3",
     "chokidar-cli": "^1.2.1",
     "concurrently": "^4.0.1",
     "del-cli": "^1.1.0",
@@ -52,11 +52,11 @@
     "npm-run-all": "^4.1.3",
     "onchange": "^4.1.0",
     "prettier": "^1.14.2",
-    "puppeteer": "^1.7.0",
-    "rollup": "^0.65.0",
+    "puppeteer": "^1.8.0",
+    "rollup": "^0.65.2",
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-json": "^3.0.0",
-    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "ts-jest": "^23.1.4",
@@ -71,7 +71,8 @@
     "fs-extra": "^7.0.0",
     "inquirer": "^6.2.0",
     "moment": "^2.22.2",
-    "tslib": "^1.9.3"
+    "tslib": "^1.9.3",
+    "puppeteer": "^1.8.0"
   },
   "jest": {
     "moduleFileExtensions": [

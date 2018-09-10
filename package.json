@@ -19,6 +19,7 @@
     "watch:dev": "concurrently --names 'TEST,LINT' -c 'yellow,cyan' 'npm run watch:test' 'npm run watch:lint'",
     "watch:run": "nodemon --watch 'src/**/*.ts' --exec 'ts-node'",
     "watch:run:cli-experiment": "npm run watch:run -- src/cli-experiment/index.ts",
+    "watch:run:parsing-numbers": "npm run watch:run -- src/parsing-numbers/main.ts",
     "debug": "NODE_ENV=development DEBUG=* node --inspect-brk --require ts-node/register",
     "build:umd": "rollup -c src/package-experiment/rollup.config.ts",
     "build:amd": "tsc --project src/package-experiment",

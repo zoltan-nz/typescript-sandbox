@@ -4,6 +4,7 @@
 - [Experiment 2 - Creating a CLI tool in NodeJS](./src/cli-experiment/README.md)
 - [Experiment 3 - Setup an universal library package with TypeScript](./src/package-experiment/README.md)
 - [Experiment 4 - Using Jest Puppeteer for real browser acceptance testing](./src/jest-puppeteer-experiment/README.md)
+- [Experiment 5 - Parsing numbers](./src/parsing-numbers/README.md)
 
 ## NPM commands
 

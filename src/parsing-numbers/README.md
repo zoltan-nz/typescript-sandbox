@@ -1,6 +1,6 @@
 # Parsing Numbers
 
-- [Playing with Currying]
+- [Playing with Currying](https://codesandbox.io/s/132lo41267)
 
 ```javascript
 const numbers = [1, 2, 3];

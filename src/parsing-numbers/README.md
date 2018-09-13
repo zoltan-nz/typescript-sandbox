@@ -99,13 +99,10 @@ const hasFoundMatchInWith = (dataRecord, term) => property => {
 };
 
 const inPropertiesWithTerm = (searchProperties, actualSearchTerm) => item => {
-  const foundMatch = searchProperties.filter(
-    hasFoundMatchInWith(item, actualSearchTerm),
-  );
+  const foundMatch = searchProperties.filter(hasFoundMatchInWith(item, actualSearchTerm));
   return foundMatch.length > 0;
 };
 
 result = data.filter(inPropertiesWithTerm(['field1'], 'hello'));
 console.log('7 >', result);
-
 ```

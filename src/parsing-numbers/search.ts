@@ -21,7 +21,6 @@ export default class Search {
   }
 
   public run(): void {
-
     this.filteredList = this.originalList.filter((dataItem: DataModel) => {
       const foundMatches = this.filteredProperties.filter(property => {
         const value: string | IMoney | undefined = dataItem[property];

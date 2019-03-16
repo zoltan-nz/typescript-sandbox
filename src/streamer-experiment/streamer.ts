@@ -17,6 +17,6 @@ createReadStream(filePath)
     // console.log(chunk);
   })
   .on('end', () => {
-    console.log('Processed lines: ', csvParser.lines);
-    console.log('Empty lines: ', csvParser.empty_line_count);
+    console.log('Processed lines: ', csvParser.info.lines);
+    console.log('Empty lines: ', csvParser.info.empty_lines);
   });

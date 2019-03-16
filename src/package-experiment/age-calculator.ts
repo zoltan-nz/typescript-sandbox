@@ -6,7 +6,7 @@ export default class AgeCalculator {
 
   constructor(public birthday: string) {
     if (!isInValidBirthdayFormat(birthday)) {
-      throw new Error('Birthdate should be in ISO format: YYYY-MM-DD');
+      throw new Error('Birthday should be in ISO format: YYYY-MM-DD');
     }
 
     this.birthdayInMoment = moment(birthday, 'YYYY-MM-DD');
